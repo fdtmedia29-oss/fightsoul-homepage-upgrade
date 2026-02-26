@@ -18,29 +18,46 @@ const testimonials = [
   },
 ];
 
+function StarRow({ count }: { count: number }) {
+  return (
+    <div className="flex gap-0.5 mb-4">
+      {Array.from({ length: count }).map((_, i) => (
+        <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+      ))}
+    </div>
+  );
+}
+
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-20 lg:py-28 bg-zinc-900/40">
       <div className="container mx-auto px-4">
-        <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-center text-foreground mb-14 scroll-fade-in">
-          Das sagen unsere <span className="text-primary">Mitglieder</span>
-        </h2>
+        <div className="text-center mb-4 scroll-fade-in">
+          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-white mb-3">
+            DAS SAGEN UNSERE <span className="text-primary">MITGLIEDER</span>
+          </h2>
+          <div className="flex items-center justify-center gap-2 text-zinc-400 text-sm">
+            <div className="flex gap-0.5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+              ))}
+            </div>
+            <span className="font-bold text-white">5.0</span>
+            <span>Sterne auf Google</span>
+          </div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="scroll-fade-in bg-card border border-border rounded-lg p-8 flex flex-col"
+              className="scroll-fade-in bg-zinc-900 border border-zinc-800 rounded-xl p-8 flex flex-col hover:border-primary/30 transition-colors"
             >
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: t.stars }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                ))}
-              </div>
-              <p className="text-foreground/80 italic leading-relaxed flex-1 mb-6">
+              <StarRow count={t.stars} />
+              <p className="text-zinc-300 italic leading-relaxed flex-1 mb-6">
                 "{t.text}"
               </p>
-              <span className="text-sm font-semibold text-muted-foreground">— {t.name}</span>
+              <span className="text-sm font-semibold text-zinc-500">— {t.name}</span>
             </div>
           ))}
         </div>

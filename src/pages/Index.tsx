@@ -2,11 +2,14 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SocialProof from "@/components/SocialProof";
-import ServicesSection from "@/components/ServicesSection";
+import IsRightForYou from "@/components/IsRightForYou";
 import WhySection from "@/components/WhySection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import CTABanner from "@/components/CTABanner";
+import GallerySection from "@/components/GallerySection";
+import ServicesSection from "@/components/ServicesSection";
 import TeamSection from "@/components/TeamSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import HowToStart from "@/components/HowToStart";
+import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -27,15 +30,18 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-zinc-950 text-white">
       <Navbar />
       <HeroSection />
       <SocialProof />
-      <ServicesSection />
+      <IsRightForYou />
       <WhySection />
-      <TestimonialsSection />
-      <CTABanner />
+      <GallerySection />
+      <ServicesSection />
       <TeamSection />
+      <TestimonialsSection />
+      <HowToStart />
+      <CTABanner />
       <Footer />
     </div>
   );
