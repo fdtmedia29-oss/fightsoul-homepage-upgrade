@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, Phone } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import logoImg from "@/assets/Gemini_Generated_Image_45tl9d45tl9d45tl-removebg-preview.png";
 
 const BOOKING_URL = "https://www.sportsnow.ch/de/centers/fightsoul-gmbh/offers";
 
@@ -33,9 +34,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#home" className="flex items-center">
-            <span className="font-heading text-2xl md:text-3xl tracking-widest text-white">
-              FIGHT<span className="text-primary">SOUL</span>
-            </span>
+            <img src={logoImg} alt="FightSoul" className="h-10 md:h-12 w-auto" />
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -75,9 +74,8 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-zinc-950 border-zinc-800 w-72">
-              <SheetTitle className="font-heading text-2xl text-white">
-                FIGHT<span className="text-primary">SOUL</span>
-              </SheetTitle>
+              <SheetTitle className="sr-only">FightSoul Menu</SheetTitle>
+              <img src={logoImg} alt="FightSoul" className="h-10 w-auto mb-2" />
               <nav className="flex flex-col gap-5 mt-8">
                 {navLinks.map((link) => (
                   <a

@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Bebas Neue"', 'sans-serif'],
+        heading: ['"Barlow Condensed"', 'sans-serif'],
         body: ['"Inter"', 'sans-serif'],
       },
       colors: {

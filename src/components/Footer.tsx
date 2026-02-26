@@ -1,5 +1,6 @@
 import { Phone, MapPin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImg from "@/assets/Gemini_Generated_Image_45tl9d45tl9d45tl-removebg-preview.png";
 
 const BOOKING_URL = "https://www.sportsnow.ch/de/centers/fightsoul-gmbh/offers";
 
@@ -16,9 +17,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h3 className="font-heading text-3xl text-white mb-4">
-              FIGHT<span className="text-primary">SOUL</span>
-            </h3>
+            <img src={logoImg} alt="FightSoul" className="h-14 w-auto mb-4" />
             <p className="text-zinc-400 text-sm leading-relaxed mb-4">
               Dein Kampfsportstudio in Thun.<br />
               Kampfsport & Fitness für alle.
