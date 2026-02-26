@@ -41,7 +41,7 @@ export default function IsRightForYou() {
         <Button
           asChild
           size="lg"
-          className="bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-wide px-10 py-6 text-lg scroll-fade-in"
+          className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-wide px-8 sm:px-10 py-5 sm:py-6 text-base sm:text-lg scroll-fade-in"
         >
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             Probetraining buchen

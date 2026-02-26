@@ -18,18 +18,20 @@ export default function CTABanner() {
           <br />
           <span className="text-primary">PROBETRAINING</span>
         </h2>
-        <p className="text-zinc-300 mb-10 max-w-md mx-auto text-lg">
+        <p className="text-zinc-300 mb-8 max-w-md mx-auto text-base sm:text-lg">
           Teste FightSoul kostenlos und unverbindlich.
         </p>
-        <Button
-          asChild
-          size="lg"
-          className="bg-primary hover:bg-primary/90 text-white text-xl px-14 py-8 font-bold rounded-lg uppercase tracking-wide animate-pulse-glow shadow-[0_0_40px_hsl(355_72%_56%/0.5)]"
-        >
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-            Kostenloses Probetraining sichern
-          </a>
-        </Button>
+        <div className="px-4 sm:px-0">
+          <Button
+            asChild
+            size="lg"
+            className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white text-base sm:text-xl px-8 sm:px-14 py-5 sm:py-8 font-bold rounded-lg uppercase tracking-wide animate-pulse-glow shadow-[0_0_40px_hsl(355_72%_56%/0.5)]"
+          >
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              Kostenloses Probetraining sichern
+            </a>
+          </Button>
+        </div>
         <p className="text-zinc-500 text-sm mt-5">
           Kostenlos &bull; Unverbindlich &bull; Ohne Verpflichtung
         </p>
